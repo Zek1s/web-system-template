@@ -1,3 +1,5 @@
+http://numbersapi.com/#random/trivia
+http://www.tvmaze.com/api
 # WEB system
 - [ ] Replace "WEB system" with your system name
 
