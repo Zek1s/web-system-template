@@ -1,13 +1,15 @@
 http://numbersapi.com/#random/trivia
 http://www.tvmaze.com/api
-# WEB system
+
+# Random Numbers Fact
 - [ ] Replace "WEB system" with your system name
 
 ## Description
-- [ ] Provide WEB system description in few sentences - its purpose, users, etc.
+- This system provides a interesting fact about any random number.
 
 ## Entity definition
-- [ ] Define the entity ("object" that will be manipulated) of WEB system
+- Fact: number(number(length=1000)), fact(string(length=10000)), likes(number(length>0)).
+
 - [ ] Entity should have a name
 - [ ] Entity should have 3 mandatory attributes:
     - [ ] ID - depending on specific service this could be a number or string
@@ -18,6 +20,14 @@ http://www.tvmaze.com/api
     - [ ] Each attribute should have restrictions defined: list of constants, or number range, or string length, or string format, or object schema, or array schema or other. For example, you can use `joi` language to define restrictions: https://github.com/hapijs/joi/blob/v13.1.2/API.md
 
 ## API definition
+- Retrieve a random number fact: GET http://numbersapi.com/random/trivia
+- Post like: POST /api/trivia/:number/like
+    - 400 - {error: 'invalid number'}
+
+- 404 - {error: 'page not found'}
+- 500 - {error: 'server error'}
+
+
 - [ ] Define specific service (konkrečios paslaugos) API methods that WEB system is going to use
 - [ ] Optionally define additional API methods that WEB system is going to expose
 - [ ] API should have at least 4 methods
@@ -44,3 +54,5 @@ http://www.tvmaze.com/api
         - [ ] Depending on chosen header of API method that returns multiple entities, it should be posible to select specific 10 entities starting index, sort entities by attribute, filter entities by attribute pattern, or other (should be approved by Product Owner (PO))
     - [ ] A component to create a new entity/edit existing entity. It should be posbile to create new entity and edit selected entity
         - [ ] Each attribute should have a dedicated editor field: text box for string or number, checkbox or radio buttons for boolean, date picker for date, etc.
+
+https://wireframe.cc/F4zcbq
