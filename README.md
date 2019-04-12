@@ -8,7 +8,7 @@ http://www.tvmaze.com/api
 - This system provides a interesting fact about any random number.
 
 ## Entity definition
-- Fact: number(number(length=1000)), fact(string(length=10000)), likes(number(length>0)).
+- Fact: ID(number(length=1000)), fact(string(length=10000)), likes(number(length>0)), like_date(date(length=10)), like_location(string(length=100)).
 
 - [ ] Entity should have a name
 - [ ] Entity should have 3 mandatory attributes:
