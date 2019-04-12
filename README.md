@@ -8,7 +8,7 @@ http://www.tvmaze.com/api
 - This system provides a interesting fact about any random number.
 
 ## Entity definition
-- Fact: ID(number(length=1000)), fact(string(length=10000)), likes(number(length>0)), like_date(date(length=10)), like_location(string(length=100)).
+- Fact: ID(number(length=1000)), fact(string(length=10000)), likes(number(length>0)), like_date(date(length=10)), category(string(length=100)).
 
 - [ ] Entity should have a name
 - [ ] Entity should have 3 mandatory attributes:
@@ -21,9 +21,10 @@ http://www.tvmaze.com/api
 
 ## API definition
 - Retrieve a random number fact: GET http://numbersapi.com/random/trivia
+- Retreive a random year fact: GET http://numbersapi.com/random/year
 - Post like: POST /api/trivia/:number/like
     - 400 - {error: 'invalid number'}
-
+- Unlike: DELETE /api/trivia/:number/like
 - 404 - {error: 'page not found'}
 - 500 - {error: 'server error'}
 
